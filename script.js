@@ -1,10 +1,27 @@
+// credentials database
+const usnmAult = "ault@andrims.com";
+const usnmBowswa = "bowswa@andrims.com";
+
 function login(){
+    //get credentials
     var username = document.getElementById("usnm");
     var password = document.getElementById("pwd");
-    if(username == "ault"){
-        document.write("tester");
+
+    //determine user
+    if(username == usnmAult){
+        userAult();
+        mainUnlock();
     }
-    document.write(username);
-    document.write(password);
-    document.write("china");
+
+    if(username == usnmBowswa){
+        mainUnlock();
+    }
+}
+
+function userAult(){
+    document.getElementById("welcomeUsername") = "Ault";
+}
+
+function mainUnlock(){
+    
 }

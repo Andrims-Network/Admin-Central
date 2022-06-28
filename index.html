@@ -5,16 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>Admin Central</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png">
 </head>
 <body>
+    <div class="title">
+        <h3>Welcome to Andrims Admin Central</h3>
+    </div>
+
     <div class="login">
         <label for="usnm">Username</label>
-        <input id="usnm">
+        <input id="usnm" type="email">
         <label for="pwd">Password</label>
-        <input id="pwd">
+        <input id="pwd" type="password">
         <button onclick="login()">Login</button>
     </div>
+
+    <div class="main">
+        <div class="welcomeUser">
+            <h2 id="welcomeBack">Welcome Back, <label id="welcomeUsername">[USER]</label>!</h2>
+        </div>
+    </div>
+
     <div class="feedback">
 
     </div>
