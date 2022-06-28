@@ -1,5 +1,10 @@
 function login(){
     var username = document.getElementById("usnm");
     var password = document.getElementById("pwd");
-    document.getElementsByClassName("feedback") = username + " " + password;
+    if(username == "ault"){
+        document.write("tester");
+    }
+    document.write(username);
+    document.write(password);
+    document.write("china");
 }
