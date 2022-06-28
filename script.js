@@ -19,7 +19,7 @@ function login(){
 }
 
 function userAult(){
-    document.getElementById("welcomeUsername") = "Ault";
+    document.getElementById("welcomeUsername") = ", Ault";
 }
 
 function mainUnlock(){
