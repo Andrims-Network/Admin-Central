@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Lack;
+    src: url(assets/fonts/lack-regular.otf);
+    font-style: normal;
+}
+@font-face {
+    font-family: Lack-line;
+    src: url(assets/fonts/lack-line-regular.otf);
+    font-style: normal;
+}
+
+#welcomeBack{
+    font-family: Lack;
+    font-style: normal;
+}
