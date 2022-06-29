@@ -34,9 +34,10 @@ function login(){
     }
 }
 
-//Triggers unlock procedures(Update welcome message, provide login)
+//Triggers unlock procedures(Update welcome message, authenticate, display dashboard access)
 function userAult(){
     document.getElementById("welcomeUsername").innerHTML = ", Ault";
+    document.getElementById("continueButton").removeAttribute("hidden");
     fwrite(aultVerification, "open");
 }
 
