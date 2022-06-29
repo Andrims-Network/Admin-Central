@@ -20,14 +20,12 @@ function login(){
     if(username == usnmAult){
         if(password == pwdAult){
             userAult();
-            mainUnlock();
         } else{
             window.alert("Wrong Password");
         }
     } else if(username == usnmBowswa){
         if(password == pwdBowswa){
             userBowswa();
-            mainUnlock();
         } else{
             window.alert("Wrong Password");
         }
@@ -44,9 +42,4 @@ function userAult(){
 
 function userBowswa(){
     document.getElementById("welcomeUsername").innerHTML = ", Ault";
-}
-
-//in works
-function mainUnlock(){
-    
 }
