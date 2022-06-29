@@ -34,7 +34,7 @@ function login(){
     }
 }
 
-//Updates Welcome Message to include username
+//Triggers unlock procedures(Update welcome message, provide login)
 function userAult(){
     document.getElementById("welcomeUsername").innerHTML = ", Ault";
     fwrite(aultVerification, "open");
