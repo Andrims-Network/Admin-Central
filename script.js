@@ -18,15 +18,15 @@ function login(){
         } else{
             window.alert("Wrong Password");
         }
-    }
-
-    if(username == usnmBowswa){
+    } else if(username == usnmBowswa){
         if(password == pwdBowswa){
             userBowswa();
             mainUnlock();
         } else{
             window.alert("Wrong Password");
         }
+    } else{
+        window.alert("Invalid Username. User does not exist");
     }
 }
 
