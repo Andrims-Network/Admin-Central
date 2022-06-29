@@ -1,5 +1,6 @@
 # Andrims-Admin-Central
 Staff Dashboard for Andrims related links and resources
+https://andrims.net/
 
 Dashboard Structure and Planning:
 Usernames are stored at top of js file as consts(ex. const Ault = "ault@andrims.com"). 
