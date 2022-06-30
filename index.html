@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var userAuth = "locked";
+    </script>
     <script src="script.js"></script>
     <title>Admin Central</title>
     <link rel="icon" type="image/x-icon" href="/assets/icon.png">
@@ -30,7 +33,7 @@
     <div class="main">
         <div class="welcomeUser">
             <h2 id="welcomeBack">Welcome Back<label id="welcomeUsername"></label>!</h2>
-            <button id="continueButton" onclick="window.location.href='/dashboard/dashboard.html'" type="button" hidden>Enter Dashboard</button>
+            <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
         </div>
     </div>
 </body>

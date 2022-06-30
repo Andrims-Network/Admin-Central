@@ -33,9 +33,19 @@ function login(){
 function userAult(){
     document.getElementById("welcomeUsername").innerHTML = ", Ault";
     document.getElementById("continueButton").removeAttribute("hidden");
+    userAuth = "ault";
 }
 
 function userBowswa(){
     document.getElementById("welcomeUsername").innerHTML = ", Bowswa";
     document.getElementById("continueButton").removeAttribute("hidden");
+    userAuth = "bowswa";
+}
+
+function continueButton(){
+    if(userAuth == "locked"){
+        window.alert("Authentication failed!");
+    } else{
+        window.location.href="/dashboard/dashboard.html";
+    }
 }
