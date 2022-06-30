@@ -16,6 +16,10 @@
     margin:10px;
 }
 
+#continueButton{
+    margin: 10px;
+}
+
 #loginTitle{
     font-family: Helvetica, sans-serif;
     font-size: 16px;
