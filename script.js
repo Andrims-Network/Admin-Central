@@ -5,6 +5,7 @@ const usnmBowswa = "bowswa@andrims.com";
 const pwdAult = "testpwd";
 const pwdBowswa = "temppwd";
 
+//onclick login, trigger function
 function login(){
     //get credentials
     var username = document.getElementById("usnm").value;
