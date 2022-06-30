@@ -13,27 +13,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="title">
-        <u><p id="loginTitle">Welcome to Andrims Admin Central</p></u>
-    </div>
-
-    <div class="login">
-        <form id="loginForm">
-            <label for="usnm">Username</label>
-            <input id="usnm" type="email">
-            <label for="pwd">Password</label>
-            <input id="pwd" type="password">
-            <button type="button" onclick="login()">Login</button>
-            <button type="reset">Reset</button>
-        </form>
-    </div>
-
-    <br>
-
-    <div class="main">
-        <div class="welcomeUser">
-            <h2 id="welcomeBack">Welcome Back<label id="welcomeUsername"></label>!</h2>
-            <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
+    <div class="all">
+        <div class="title">
+            <u><p id="loginTitle">Welcome to Andrims Admin Central</p></u>
+        </div>
+    
+        <div class="login">
+            <form id="loginForm">
+                <label class="label, inForm" for="usnm">Username</label>
+                <input class="inForm" id="usnm" type="email">
+                <br>
+                <label class="label, inForm" for="pwd">Password</label>
+                <input class="inForm" id="pwd" type="password">
+                <br>
+                <button class="inForm" type="button" onclick="login()">Login</button>
+                <button class="inForm" type="reset">Reset</button>
+            </form>
+        </div>
+    
+        <br>
+    
+        <div class="main">
+            <div class="welcomeUser">
+                <p id="welcomeBack">Welcome Back<label id="welcomeUsername"></label>!</p>
+                <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
+            </div>
         </div>
     </div>
 </body>
