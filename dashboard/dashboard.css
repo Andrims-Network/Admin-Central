@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Lack;
+    src: url(../assets/fonts/lack-regular.otf);
+}
+
+@font-face {
+    font-family: Lack-line;
+    src: url(../assets/fonts/lack-line-regular.otf);
+}
+
+body{
+    background-image: linear-gradient(to right, #00B4DB, #0083B0);
+}
+
+#titleHead{
+    font-family: Lack;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.header{
+    padding: 5px;
+    border-radius: 0;
+    background-color: rgba(0, 255, 255, 0.344);
+    margin: 0%;
+}
+
+.main{
+    grid: 500px;
+}
