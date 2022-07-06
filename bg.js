@@ -6,7 +6,7 @@ function freshDot(){
     this.obj.classList.add("box");
     this.obj.style.top = (window.innerHeight * Math.random()) + 'px';
     this.obj.style.left = (window.innerWidth * Math.random()) + 'px';
-  this.obj.style.animation = "hover "+random(5,20,2)+"s infinite";
+  this.obj.style.animation = "hover "+random(8,20,0)+"s infinite";
  this.obj.style.animationDelay = random(0,5,2)+'s';
   var reverse = random(1,2,0);
 
