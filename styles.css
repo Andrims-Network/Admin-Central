@@ -31,6 +31,9 @@ body{
 input,button{
   font-family: 'Lack', sans-serif;
 }
+::placeholder {
+  color: rgba(255,255,255,0.5);
+}
 
 .loginForm{
   position: absolute;
@@ -151,3 +154,4 @@ a{
 a:visited{
   color: black;
 }
+
