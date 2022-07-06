@@ -6,13 +6,13 @@ const pwdAult = "testpwd";
 const pwdBowswa = "temppwd";
 var timeout;
 function loader(){
-  document.getElementById('login').style.display = 'none';
-  document.getElementById('loader').style.display = 'block';
-  timeout = setTimeout(login, 1000);
-  document.getElementById('uL').style.color = 'black';
-      document.getElementById('uL').innerHTML = 'Username';
-      document.getElementById('pL').style.color = 'black';
-      document.getElementById('pL').innerHTML = 'Password';
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('loader').style.display = 'block';
+    timeout = setTimeout(login, 1000);
+    document.getElementById('uL').style.color = 'black';
+    document.getElementById('uL').innerHTML = 'Username';
+    document.getElementById('pL').style.color = 'black';
+    document.getElementById('pL').innerHTML = 'Password';
 }
 //onclick login, trigger function
 function login(){

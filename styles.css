@@ -1,21 +1,32 @@
-@font-face {font-family: Lack; src: url('/assets/fonts/lack-regular.otf')}
+@font-face {
+  font-family: Lack;
+  src: url('/assets/fonts/lack-regular.otf');
+}
+
+@font-face {
+  font-family: Lack-line;
+  src: url('/assets/fonts/lack-line-regular.otf');
+}
 
 body{
   margin: 0;
-    background: #b62b83;
+  background: #b62b83;
   background-image: linear-gradient(#f0672c, #ba26b0);
-    background-size: 400% 400%;
-    animation: background 60s ease infinite;
+  background-size: 400% 400%;
+  animation: background 60s ease infinite;
   font-family: 'Lack', sans-serif;
 }
+
 @keyframes background {
-    0%{background-position:11% 0%}
-    50%{background-position:90% 100%}
-    100%{background-position:11% 0%}
+  0%{background-position:11% 0%}
+  50%{background-position:90% 100%}
+  100%{background-position:11% 0%}
 }
+
 input,button{
   font-family: 'Lack', sans-serif;
 }
+
 .loginForm{
   position: absolute;
   left: 50%;
@@ -26,42 +37,45 @@ input,button{
   height: 50vh;
   padding: 20px;
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.1);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 3px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.09);
 }
+
 .loginForm input {
   background: rgba(255, 255, 255, 0.1);
-border-radius: 10px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 5px;
 }
+
 #loginBtn{
   background: rgba(255, 255, 255, 0.1);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
 }
+
 #continueButton{
   background: rgba(255, 255, 255, 0.1);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -71,20 +85,20 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 .box{
   position: fixed;
   z-index: -1;
-background: rgba(255, 255, 255, 0.05);
-border-radius: 10px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.1);
-  animation: hover 10s linear infinite;
-      animation-timing-function: ease-in-out;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: hover 10s linear infinite;
+        animation-timing-function: ease-in-out;
 
 }
 @keyframes hover{
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 30px); }
-    100%   { transform: translate(0, -0px); }
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 30px); }
+  100%   { transform: translate(0, -0px); }
 }
 
 .ripple {
@@ -96,6 +110,7 @@ border: 1px solid rgba(255, 255, 255, 0.1);
   top: 50%;
   transform: translate(-25%, -25%);
 }
+
 .ripple div {
   position: absolute;
   border: 2px solid #fff;
@@ -103,9 +118,11 @@ border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
+
 .ripple div:nth-child(2) {
   animation-delay: -0.5s;
 }
+
 @keyframes ripple {
   0% {
     top: 36px;

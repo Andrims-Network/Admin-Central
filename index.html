@@ -3,37 +3,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Central</title>
-    <link rel="icon" type="image/x-icon" href="./assets/icon.png">
-    <link rel="stylesheet" href="style.css?v=1.1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Central</title>
+  <link rel="icon" type="image/x-icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="style.css?v=1.1">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <script>
+    var userAuth = "locked";
+  </script>
+  <script src="script.js"></script>
+  <script src='bg.js'></script>
 </head>
 <body>
-<div class='loginForm'>
-  <div id="loader" style='display: none'><div class="ripple"><div></div><div></div></div></div>
-  <div id='login' style='text-align: center;'>
-  <h1>Andrims</h1>
-  <h3>Welcome Back<span id='welcomeUsername'></span>!</h3>
-    <p>This page is for admins only! If you're lost, click here <a href='#'></a></p>
-            <form id="loginForm">
-                <label id='uL' class="label, inForm" for="usnm">Username</label><br>
-                <input class="inForm" id="usnm" type="email">
-                <br><br>
-                <label id='pL' class="label, inForm" for="pwd">Password</label><br>
-                <input class="inForm" id="pwd" type="password">
-                <br><br>
-                <button class="inForm" id='loginBtn' type="button" onclick="loader()">Login</button>
-            </form><br>
-                <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
+  <div class='loginForm'>
+    <div id="loader" style='display: none'><div class="ripple"><div></div><div></div></div></div>
+
+    <div id='login' style='text-align: center;'>
+      <h1>Andrims</h1>
+      <h3>Welcome Back<span id='welcomeUsername'></span>!</h3>
+      <p>This page is for admins only! If you're lost, click <a href='https://www.andrims.com'>here</a></p>
+      <form id="loginForm">
+        <label id='uL' class="label, inForm" for="usnm">Username</label><br>
+        <input class="inForm" id="usnm" type="email">
+        <br><br>
+        <label id='pL' class="label, inForm" for="pwd">Password</label><br>
+        <input class="inForm" id="pwd" type="password">
+        <br><br>
+        <button class="inForm" id='loginBtn' type="button" onclick="loader()">Login</button>
+      </form>
+      
+      <br>
+
+      <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
     </div>
-</div>
-      <script>
-        var userAuth = "locked";
-    </script>
-    <script src="script.js"></script>
-  <script src='bg.js'></script>
+  </div>
+  
 </body>
 </html>
