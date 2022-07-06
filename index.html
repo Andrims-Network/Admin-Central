@@ -6,13 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Central</title>
   <link rel="icon" type="image/x-icon" href="./assets/icon.png">
+
   <link rel="stylesheet" href="styles.css?v=1.1">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <script>
-    var userAuth = "locked";
-  </script>
-  <script src="script.js"></script>
-  <script src='bg.js'></script>
 </head>
 <body>
   <div class='loginForm'>
@@ -24,10 +20,10 @@
       <p>This page is for admins only! If you're lost, click <a href='https://www.andrims.com'>here</a></p>
       <form id="loginForm">
         <label id='uL' class="label, inForm" for="usnm">Username</label><br>
-        <input class="inForm" id="usnm" type="email">
+        <input class="inForm" id="usnm" type="email" value="ault@andrims.com">
         <br><br>
         <label id='pL' class="label, inForm" for="pwd">Password</label><br>
-        <input class="inForm" id="pwd" type="password">
+        <input class="inForm" id="pwd" type="password" value='testpwd'>
         <br><br>
         <button class="inForm" id='loginBtn' type="button" onclick="loader()">Login</button>
       </form>
@@ -37,6 +33,11 @@
       <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
     </div>
   </div>
-  
+	
+  <script src='bg.js'></script>
+    <script>
+    var userAuth = "locked";
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
