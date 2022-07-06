@@ -4,7 +4,16 @@ const usnmBowswa = "bowswa@andrims.com";
 
 const pwdAult = "testpwd";
 const pwdBowswa = "temppwd";
-
+var timeout;
+function loader(){
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('loader').style.display = 'block';
+  timeout = setTimeout(login, 1000);
+  document.getElementById('uL').style.color = 'black';
+      document.getElementById('uL').innerHTML = 'Username';
+      document.getElementById('pL').style.color = 'black';
+      document.getElementById('pL').innerHTML = 'Password';
+}
 //onclick login, trigger function
 function login(){
     //get credentials
@@ -16,21 +25,29 @@ function login(){
         if(password == pwdAult){
             userAult();
         } else{
-            window.alert("Wrong Password");
+            document.getElementById('pL').style.color = 'red';
+      document.getElementById('pL').innerHTML = '<b>Incorrect Password</b>';
         }
     } else if(username == usnmBowswa){
         if(password == pwdBowswa){
             userBowswa();
         } else{
-            window.alert("Wrong Password");
+            document.getElementById('pL').style.color = 'red';
+      document.getElementById('pL').innerHTML = '<b>Incorrect Password</b>';
         }
     } else{
-        window.alert("Invalid Username. User does not exist");
+        document.getElementById('uL').style.color = 'red';
+      document.getElementById('uL').innerHTML = '<b>Incorrect Username</b>';
+      document.getElementById('pL').style.color = 'red';
+      document.getElementById('pL').innerHTML = '<b>Incorrect Password</b>';
     }
+  document.getElementById('login').style.display = 'block';
+        document.getElementById('loader').style.display = 'none';
 }
 
 //Triggers unlock procedures(Update welcome message, authenticate, display dashboard access)
 function userAult(){
+  document.getElementById('loginBtn').style.display = 'none';
     document.getElementById("welcomeUsername").innerHTML = ", Ault";
     document.getElementById("continueButton").removeAttribute("hidden");
     userAuth = "ault";
@@ -38,7 +55,7 @@ function userAult(){
 
 function userBowswa(){
     document.getElementById("welcomeUsername").innerHTML = ", Bowswa";
-    document.getElementById("continueButton").removeAttribute("hidden");
+   document.getElementById('loginBtn').style.display = 'none'; document.getElementById("continueButton").removeAttribute("hidden");
     userAuth = "bowswa";
 }
 
