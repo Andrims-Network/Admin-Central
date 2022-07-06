@@ -11,7 +11,7 @@
 body{
   margin: 0;
   background: #b62b83;
-  background-image: linear-gradient(#f0672c, #ba26b0);
+  background-image: linear-gradient(135deg, #f0672c, #ba26b0);
   background-size: 400% 400%;
   animation: background 60s ease infinite;
   font-family: 'Lack', sans-serif;
