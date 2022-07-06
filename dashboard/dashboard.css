@@ -1,15 +1,32 @@
 @font-face {
-    font-family: Lack;
-    src: url(../assets/fonts/lack-regular.otf);
+  font-family: Lack;
+  src: url('/assets/fonts/lack-regular.otf');
 }
 
 @font-face {
-    font-family: Lack-line;
-    src: url(../assets/fonts/lack-line-regular.otf);
+  font-family: Lack-line;
+  src: url('/assets/fonts/lack-line-regular.otf');
 }
 
 body{
-    background-image: linear-gradient(to right, #00B4DB, #0083B0);
+  margin: 0;
+  background: #b62b83;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(135deg,#f0672c, #ba26b0);
+  background-size: 400% 400%;
+  animation: background 60s ease infinite;
+  font-family: 'Lack', sans-serif;
+}
+
+@keyframes background {
+  0%{background-position:11% 0%}
+  50%{background-position:90% 100%}
+  100%{background-position:11% 0%}
+}
+
+input,button{
+  font-family: 'Lack', sans-serif;
 }
 
 #titleHead{
@@ -25,9 +42,13 @@ body{
 }
 
 .header{
-    padding: 5px;
-    border-radius: 0;
-    background-color: rgba(0, 255, 255, 0.344);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius-bottom-left: 16px;
+  border-radius-bottom-right: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
     margin: 0%;
 }
 

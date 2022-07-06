@@ -11,7 +11,9 @@
 body{
   margin: 0;
   background: #b62b83;
-  background-image: linear-gradient(#f0672c, #ba26b0);
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(135deg,#f0672c, #ba26b0);
   background-size: 400% 400%;
   animation: background 60s ease infinite;
   font-family: 'Lack', sans-serif;
@@ -91,8 +93,7 @@ input,button{
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-    animation: hover 10s linear infinite;
-        animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 
 }
 @keyframes hover{
@@ -138,4 +139,11 @@ input,button{
     height: 72px;
     opacity: 0;
   }
+}
+
+a{
+  color: black;
+}
+a:visited{
+  color: black;
 }
