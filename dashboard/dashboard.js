@@ -1,6 +1,7 @@
 window.onscroll = fixedHeader();
 
-var header = document.getElementsByClassName("header");
+var header = document.getElementsByClassName("header")[0];
+console.log(header);
 var headerPos = header.offsetTop;
 
 function fixedHeader(){
