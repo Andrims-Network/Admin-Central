@@ -14,9 +14,28 @@
         <div class="header">
             <p id="titleHead">Andrims Admin Central Dashboard</p>
         </div>
+
         <div class="main">
-            <p class="amp">AMP Management Panel</p>
-            <p class="amp" id=""></p>
+            <div class="dashbSection" id="adminOnly">
+                <div class="dashbItem" id="ampmain">
+                    <span class="dashItemTitle" id="ampTitle"><b>AMP</b></span>
+                    <span class="dashItemContent" id="ampContent">Server Management and Application Deployment Panel.</span>
+                    <button class="dashItemButton" id="ampLink" onclick="window.location.href='http://amp.andrims.net'">AMP Login</button>
+                </div>
+                <div class="dashbItem" id="cloudflare">
+                    <span class="dashItemTitle" id="cloudflareTitle"><b>Cloudflare</b></span>
+                    <span class="dashItemContent" id="cloudflareContent">Domain Management and Frontend Deployments</span>
+                    <button class="dashItemButton" id="cloudflareLink" onclick="window.location.href='https://dash.cloudflare.com/ab0eee634ed415582b6225aeba7f8105'">Cloudflare</button>
+                </div>
+                <div class="dashbItem" id="improvMX">
+                    <span class="dashItemTitle" id="improvMXtitle"><b>ImprovMX</b></span>
+                    <span class="dashItemContent" id="improvMXcontent">Email Routing Management for andrims.com domain.</span>
+                    <button class="dashItemButton" id="improvMXlink" onclick="window.location.href='https://app.improvmx.com/'">Manage</button>
+                </div>
+            </div>
+            <div class="dashbSection" id="modAccess">
+                    
+            </div>
         </div>
     </div>
 </body>
