@@ -6,18 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Central</title>
   <link rel="icon" type="image/x-icon" href="./assets/icon.png">
-
   <link rel="stylesheet" href="styles.css?v=1.1">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class='loginForm'>
-    <div id="loader" style='display: none'><div class="ripple"><div></div><div></div></div></div>
+      <div id="loader" style='display: none'><div class="ripple"><div></div><div></div></div></div>
 
+  <div class='loginForm'>
     <div id='login' style='text-align: center;'>
       <h1>Andrims</h1>
-      <h3>Welcome Back<span id='welcomeUsername'></span>!</h3>
-      <p>This page is for admins only! If you're lost, click <a href='https://www.andrims.com'>here</a></p>
+      <h3><span id='welcomeUsername'>Welcome Back!</span></h3><br>
+      <p id='adminOnly'>This page is for admins only! If you're lost, click <a href='https://www.andrims.com'>here</a></p><br>
       <form id="loginForm">
         <label id='uL' class="label, inForm" for="usnm">Username</label><br>
         <input class="inForm" id="usnm" type="email" placeholder="username@andrims.com">
@@ -27,10 +26,7 @@
         <br><br>
         <button class="inForm" id='loginBtn' type="button" onclick="loader()">Login</button>
       </form>
-      
-      <br>
-
-      <button id="continueButton" onclick="continueButton()" type="button" hidden>Enter Dashboard</button>
+      <button id="continueButton" onclick="continueButton()" type="button" hidden>Continue</button>
     </div>
   </div>
 	

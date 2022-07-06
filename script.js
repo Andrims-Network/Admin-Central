@@ -37,7 +37,7 @@ function login(){
         }
     } else{
         document.getElementById('uL').style.color = 'red';
-      document.getElementById('uL').innerHTML = '<b>Incorrect Username</b>';
+      document.getElementById('uL').innerHTML = '<b>Incorrect User</b>';
       document.getElementById('pL').style.color = 'red';
       document.getElementById('pL').innerHTML = '<b>Incorrect Password</b>';
     }
@@ -48,13 +48,13 @@ function login(){
 //Triggers unlock procedures(Update welcome message, authenticate, display dashboard access)
 function userAult(){
   document.getElementById('loginBtn').style.display = 'none';
-    document.getElementById("welcomeUsername").innerHTML = ", Ault";
+    document.getElementById("welcomeUsername").innerHTML = "Hey Ault!";
     document.getElementById("continueButton").removeAttribute("hidden");
     userAuth = "ault";
 }
 
 function userBowswa(){
-    document.getElementById("welcomeUsername").innerHTML = ", Bowswa";
+    document.getElementById("welcomeUsername").innerHTML = "Hey Bowswa!";
    document.getElementById('loginBtn').style.display = 'none'; document.getElementById("continueButton").removeAttribute("hidden");
     userAuth = "bowswa";
 }

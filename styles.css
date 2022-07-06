@@ -61,6 +61,13 @@ input,button{
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 5px;
+  width: 95%;
+  left: 2.5%;
+}
+
+h1,h2,h3,h4,h5,h6,h7,p,span,button,form{
+  padding: 0;
+  margin: 0;
 }
 
 #loginBtn{
@@ -108,19 +115,26 @@ input,button{
   50%  { transform: translate(0, 30px); }
   100%   { transform: translate(0, -0px); }
 }
-
-.ripple {
-  display: inline-block;
-  width: 10vw;
-  height: 10vw;
-  position: absolute;
+#loader{
+    background: rgba(255,255,255,0.5);
   left: 50%;
   top: 50%;
-  transform: translate(-25%, -25%);
+  position: absolute;
+  z-index: 9999;
+  transform: translate(-2em, -2em);
+}
+.ripple {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  margin: 0 !important;
 }
 
 .ripple div {
   position: absolute;
+  background: rgba(255,255,255,0.5);/*Maybe?*/
   border: 2px solid #fff;
   opacity: 1;
   border-radius: 50%;
@@ -133,8 +147,8 @@ input,button{
 
 @keyframes ripple {
   0% {
-    top: 36px;
-    left: 36px;
+    top: 2em;
+    left: 2em;
     width: 0;
     height: 0;
     opacity: 1;
@@ -142,8 +156,8 @@ input,button{
   100% {
     top: 0px;
     left: 0px;
-    width: 72px;
-    height: 72px;
+    width: 4em;
+    height: 4em;
     opacity: 0;
   }
 }
@@ -155,3 +169,19 @@ a:visited{
   color: black;
 }
 
+@media only screen and (max-width:750px) {
+h3{
+  font-size: 3vw;
+  margin: 0;
+}
+  #adminOnly{
+  width: 100%;
+  margin: 0;
+  font-size: 2vw;
+}
+}
+@media only screen and (max-width:480px) {
+  h1{
+  font-size: 6vw;
+}
+}
