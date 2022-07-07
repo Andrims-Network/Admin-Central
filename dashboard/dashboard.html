@@ -17,24 +17,42 @@
 
         <div class="main">
             <div class="dashbSection" id="adminOnly">
+                <!--AMP Widget-->
                 <div class="dashbItem" id="ampmain">
                     <span class="dashItemTitle" id="ampTitle"><b>AMP</b></span>
-                    <span class="dashItemContent" id="ampContent">Server Management and Application Deployment Panel.</span>
-                    <button class="dashItemButton" id="ampLink" onclick="window.location.href='http://amp.andrims.net'">AMP Login</button>
+                    <span class="dashItemContent" id="ampContent">Server Management and Application Deployment Panel</span>
+                    <button class="dashItemButton" id="ampLink" onclick="window.open('http://amp.andrims.net', '_blank')">AMP Login</button>
                 </div>
+                <!--Cloudflare Widget-->
                 <div class="dashbItem" id="cloudflare">
                     <span class="dashItemTitle" id="cloudflareTitle"><b>Cloudflare</b></span>
                     <span class="dashItemContent" id="cloudflareContent">Domain Management and Frontend Deployments</span>
-                    <button class="dashItemButton" id="cloudflareLink" onclick="window.location.href='https://dash.cloudflare.com/ab0eee634ed415582b6225aeba7f8105'">Cloudflare</button>
+                    <button class="dashItemButton" id="cloudflareLink" onclick="window.open('https://dash.cloudflare.com/ab0eee634ed415582b6225aeba7f8105', '_blank')">Cloudflare</button>
                 </div>
+                <!--ImprovMX Widget-->
                 <div class="dashbItem" id="improvMX">
                     <span class="dashItemTitle" id="improvMXtitle"><b>ImprovMX</b></span>
-                    <span class="dashItemContent" id="improvMXcontent">Email Routing Management for andrims.com domain.</span>
-                    <button class="dashItemButton" id="improvMXlink" onclick="window.location.href='https://app.improvmx.com/'">Manage</button>
+                    <span class="dashItemContent" id="improvMXcontent">Email Routing Management for andrims.com domain</span>
+                    <button class="dashItemButton" id="improvMXlink" onclick="window.open('https://app.improvmx.com/', '_blank')">Manage</button>
+                </div>
+                <!--NoIP Widget-->
+                <div class="dashbItem" id="noip">
+                    <span class="dashItemTitle" id="noipTitle"><b>noIP</b></span>
+                    <span class="dashItemContent" id="noipContent">Dynamic DNS IP Management for server locations</span>
+                    <button class="dashItemButton" id="noipLink" onclick="window.open('https://my.noip.com/dynamic-dns', '_blank')">DDNS</button>
                 </div>
             </div>
             <div class="dashbSection" id="modAccess">
-                    
+                <div class="dashbItem" id="github">
+                    <span class="dashItemTitle" id="githubTitle"><b>Github</b></span>
+                    <span class="dashItemContent" id="githubContent">Andrims Github Organization to manage frontend projects</span>
+                    <button class="dashItemButton" id="githubLink" onclick="window.open('https://github.com/Andrims-Network', '_blank')">Open Org</button>
+                </div>
+                <div class="dashbItem" id="replit">
+                    <span class="dashItemTitle" id="replitTitle"><b>Replit</b></span>
+                    <span class="dashItemContent" id="replitContent">Andrims Replit Org for collaboration in Git</span>
+                    <button class="dashItemButton" id="replitLink" onclick="window.open('https://replit.com/team/AndrimsDevs', '_blank')">Code</button>
+                </div>
             </div>
         </div>
     </div>
