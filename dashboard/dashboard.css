@@ -25,33 +25,74 @@ body{
   100%{background-position:11% 0%}
 }
 
-input,button{
+button{
   font-family: 'Lack', sans-serif;
 }
 
-#titleHead{
-    font-family: Lack;
-    font-size: 25px;
-    margin: 10px;
-}
-
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-.header{
-  background: rgba(255, 255, 255, 0.1);
-  border-radius-bottom-left: 16px;
-  border-radius-bottom-right: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+.box{
+  position: fixed;
+  z-index: -9999;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-    margin: 0%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation-timing-function: ease-in-out;
+  animation: hover;
+
+}
+@keyframes hover{
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 30px); }
+  100%   { transform: translate(0, -0px); }
 }
 
-.main{
-    grid: 500px;
+/* CSS flexbox stuff here */
+#adminOnly{
+  display: flex;
+}
+#modAccess{
+  display: flex;
+}
+.dashbItem{
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+#adminOnly .dashbItem{
+  background: rgba(255,255,255,0.1);
+  transition: 0.5s;
+  margin: 2vh;
+  width: 25%;
+  height: 40vh;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+#modAccess .dashbItem{
+  transition: 0.5s;
+  background: rgba(255,255,255,0.1);
+  margin: 2vh;
+  width: 50%;
+  height: 40vh;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.dashItemTitle{
+  font-size: 3vw;
+}
+.dashItemContent{}
+.dashItemButton{}
+img{
+  height: 5vh;
+  width: auto;
 }
