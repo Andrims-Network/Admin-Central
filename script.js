@@ -1,3 +1,4 @@
+location.replace('/dashboard/dashboard.html')
 // credentials database
 const usnmAult = "ault@andrims.com";
 const usnmBowswa = "bowswa@andrims.com";
