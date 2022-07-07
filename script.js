@@ -1,13 +1,15 @@
 // credentials database
 const usnmAult = "ault@andrims.com";
 const usnmBowswa = "bowswa@andrims.com";
+const usnmRamenator = "ramenator@andrims.com";
 
 //pwd key encryption U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT
 //
 
-const pwdKey = CryptoJS.AES.decrypt("U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT", "andrims");
-const pwdAult = CryptoJS.AES.decrypt("U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=", pwdKey.toString(CryptoJS.enc.Utf8)).toString(CryptoJS.enc.Utf8);
-const pwdBowswa = CryptoJS.AES.decrypt("U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=", pwdKey.toString(CryptoJS.enc.Utf8)).toString(CryptoJS.enc.Utf8);
+const pwdKey = CryptoJS.AES.decrypt("U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT", "andrims").toString(CryptoJS.enc.Utf8);
+const pwdAult = CryptoJS.AES.decrypt("U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=", pwdKey).toString(CryptoJS.enc.Utf8);
+const pwdBowswa = CryptoJS.AES.decrypt("U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=", pwdKey).toString(CryptoJS.enc.Utf8);
+const pwdRamenator = CryptoJS.AES.decrypt("U2FsdGVkX1+ZmzrKkCm5GgdWH6pIU2emTlQvUOhf7kY=", pwdKey);
 
 var timeout;
 function loader(){
