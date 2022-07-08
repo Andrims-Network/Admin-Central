@@ -118,15 +118,19 @@ button{
 /* Hover */
 #ampmain:hover{
   background: #4E8AB7;
+  color: #fff;
 }
 #cloudflare:hover{
   background: #F38020;
+  color: #fff;
 }
 #improvMX:hover{
   background: #04A4FE;
+  color: #fff
 }
 #noip:hover{
   background: #8FBE00;
+  color: #fff;
 }
 #github:hover{
   background: #2B2D30;
@@ -136,5 +140,6 @@ button{
   background: #E6E6E6;
 }
 #realvnc:hover{
-  background: #f0f0f0;
+  background: #288CF4;
+  color: #fff;
 }
