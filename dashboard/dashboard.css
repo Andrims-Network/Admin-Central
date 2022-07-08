@@ -79,7 +79,7 @@ button{
   transition: 0.5s;
   background: rgba(255,255,255,0.1);
   margin: 2vh;
-  width: 50%;
+  width: 33.33%;
   height: 40vh;
   border-radius: 0.5rem;
   text-align: center;
@@ -113,4 +113,28 @@ button{
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
+}
+
+/* Hover */
+#ampmain:hover{
+  background: #4E8AB7;
+}
+#cloudflare:hover{
+  background: #F38020;
+}
+#improvMX:hover{
+  background: #04A4FE;
+}
+#noip:hover{
+  background: #8FBE00;
+}
+#github:hover{
+  background: #2B2D30;
+  color: #fff;
+}
+#replit:hover{
+  background: rgba(255,255,255,0.7);
+}
+#realvnc:hover{
+  background: #f0f0f0;
 }
