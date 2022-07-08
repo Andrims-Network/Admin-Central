@@ -1,15 +1,51 @@
 // location.replace('/dashboard/dashboard.html')
-// credentials database
-const usnmAult = "ault@andrims.com";
-const usnmBowswa = "bowswa@andrims.com";
-const usnmRamenator = "ramenator@andrims.com";
 
+// -------- BEGIN AUTH PROCESS ----------
 
+// internal json, will be in use temporarily until server side json access is setup
+const credentialsData = `{
+    "usernames": {
+        "ault": "ault@andrims.com",
+        "bowswa": "bowswa@andrims.com",
+        "ramenator": "ramenator@andrims.com"
+    },
+    "passwords": {
+        "ault": "U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=",
+        "bowswa": "U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=",
+        "ramenator": "U2FsdGVkX1+ZmzrKkCm5GgdWH6pIU2emTlQvUOhf7kY="
+    },
+    "encryption": {
+        "cryptedKey": "U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT",
+        "keyCodeDecrypt": "andrims"
+    }
+}`;
 
-const pwdKey = CryptoJS.AES.decrypt("U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT", "andrims").toString(CryptoJS.enc.Utf8);
-const pwdAult = CryptoJS.AES.decrypt("U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=", pwdKey).toString(CryptoJS.enc.Utf8);
-const pwdBowswa = CryptoJS.AES.decrypt("U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=", pwdKey).toString(CryptoJS.enc.Utf8);
-const pwdRamenator = CryptoJS.AES.decrypt("U2FsdGVkX1+ZmzrKkCm5GgdWH6pIU2emTlQvUOhf7kY=", pwdKey).toString(CryptoJS.enc.Utf8);
+// convert json data to js readable objects
+const credsObj = JSON.parse(credentialsData);
+
+//extract usernames to indiv vars
+const usernames = credsObj['usernames'];
+const usnmAult = usernames['ault'];
+const usnmBowswa = usernames['bowswa'];
+const usnmRamenator = usernames['ramenator'];
+
+//extract encrypted passwords to indiv vars
+const passwords = credsObj['passwords'];
+const encPwdAult = passwords['ault'];
+const encPwdBowswa = passwords['bowswa'];
+const encPwdRamenator = passwords['ramenator'];
+
+//extract decryption keys
+const decryptionKey = credsObj['encryption']['cryptedKey'];
+const secondLayerKey = credsObj['encryption']['keyCodeDecrypt'];
+
+//decrypt passwords for storage
+const pwdKey = CryptoJS.AES.decrypt(decryptionKey, secondLayerKey).toString(CryptoJS.enc.Utf8);
+const pwdAult = CryptoJS.AES.decrypt(encPwdAult, pwdKey).toString(CryptoJS.enc.Utf8);
+const pwdBowswa = CryptoJS.AES.decrypt(encPwdBowswa, pwdKey).toString(CryptoJS.enc.Utf8);
+const pwdRamenator = CryptoJS.AES.decrypt(encPwdRamenator, pwdKey).toString(CryptoJS.enc.Utf8);
+
+// -------- END AUTH PROCESS ----------
 
 var timeout;
 function loader(){
@@ -21,6 +57,7 @@ function loader(){
     document.getElementById('pL').style.color = 'black';
     document.getElementById('pL').innerHTML = 'Password';
 }
+
 //onclick login, trigger function
 function login(){
     //get credentials
@@ -69,7 +106,8 @@ function userAult(){
 
 function userBowswa(){
     document.getElementById("welcomeUsername").innerHTML = "Hey Bowswa!";
-   document.getElementById('loginBtn').style.display = 'none'; document.getElementById("continueButton").removeAttribute("hidden");
+    document.getElementById('loginBtn').style.display = 'none'; 
+    document.getElementById("continueButton").removeAttribute("hidden");
     userAuth = "bowswa";
 }
 
