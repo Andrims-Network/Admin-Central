@@ -1,6 +1,9 @@
-// location.replace('/dashboard/dashboard.html')
+// For ease of development while working on dashboard.html :
+// location.replace('/dashboard/dashboard.html');
 
+// --------------------------------------
 // -------- BEGIN AUTH PROCESS ----------
+// --------------------------------------
 
 // internal json, will be in use temporarily until server side json access is setup
 const credentialsData = `{
@@ -45,7 +48,9 @@ const pwdAult = CryptoJS.AES.decrypt(encPwdAult, pwdKey).toString(CryptoJS.enc.U
 const pwdBowswa = CryptoJS.AES.decrypt(encPwdBowswa, pwdKey).toString(CryptoJS.enc.Utf8);
 const pwdRamenator = CryptoJS.AES.decrypt(encPwdRamenator, pwdKey).toString(CryptoJS.enc.Utf8);
 
-// -------- END AUTH PROCESS ----------
+// --------------------------------------
+// ---------- END AUTH PROCESS ----------
+// --------------------------------------
 
 var timeout;
 function loader(){
@@ -81,7 +86,7 @@ function login(){
         }
     } else if(username == usnmRamenator){
         if(password == pwdRamenator){
-            userBowswa();
+            userRamenator();
         } else{
             document.getElementById('pL').style.color = 'red';
       document.getElementById('pL').innerHTML = '<b>Incorrect Password</b>';
@@ -100,15 +105,27 @@ function login(){
 function userAult(){
   document.getElementById('loginBtn').style.display = 'none';
     document.getElementById("welcomeUsername").innerHTML = "Hey Ault!";
-    document.getElementById("continueButton").removeAttribute("hidden");
+    postLogin();
     userAuth = "ault";
 }
 
 function userBowswa(){
     document.getElementById("welcomeUsername").innerHTML = "Hey Bowswa!";
-    document.getElementById('loginBtn').style.display = 'none'; 
-    document.getElementById("continueButton").removeAttribute("hidden");
+    postLogin();
     userAuth = "bowswa";
+}
+
+function userRamenator(){
+    document.getElementById("welcomeUsername").innerHTML = "Hey Ramenator!";
+    postLogin();
+    userAuth = "ramenator";
+}
+
+function postLogin(){
+    document.getElementById("continueButton").removeAttribute("hidden");
+    document.getElementById("loginForm").setAttribute("hidden", "true");
+    document.getElementById("adminOnly").setAttribute("hidden", "true");
+    document.getElementById("welcomeUsername").style.fontSize = 25;
 }
 
 function continueButton(){
