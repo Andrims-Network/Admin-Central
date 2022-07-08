@@ -79,7 +79,7 @@ button{
   transition: 0.5s;
   background: rgba(255,255,255,0.1);
   margin: 2vh;
-  width: 50%;
+  width: 33.33%;
   height: 40vh;
   border-radius: 0.5rem;
   text-align: center;
@@ -89,10 +89,57 @@ button{
 }
 .dashItemTitle{
   font-size: 3vw;
+  position: relative;
+  top: 5vh;
 }
-.dashItemContent{}
-.dashItemButton{}
-img{
-  height: 5vh;
+.dashItemContent{
+  position: relative;
+  top: 5vh;
+  text-align: center;
+}
+.dashItemButton{
+  display: none;
+}
+.dashbImg{
+  height: 15vh;
   width: auto;
+  position: relative;
+  top: 5vh;
+}
+.header{
+    background: rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+/* Hover */
+#ampmain:hover{
+  background: #4E8AB7;
+  color: #fff;
+}
+#cloudflare:hover{
+  background: #F38020;
+  color: #fff;
+}
+#improvMX:hover{
+  background: #04A4FE;
+  color: #fff
+}
+#noip:hover{
+  background: #8FBE00;
+  color: #fff;
+}
+#github:hover{
+  background: #2B2D30;
+  color: #fff;
+}
+#replit:hover{
+  background: #E6E6E6;
+}
+#realvnc:hover{
+  background: #288CF4;
+  color: #fff;
 }
