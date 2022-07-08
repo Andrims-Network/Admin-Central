@@ -1,11 +1,11 @@
-location.replace('/dashboard/dashboard.html')
+// location.replace('/dashboard/dashboard.html')
 // credentials database
 const usnmAult = "ault@andrims.com";
 const usnmBowswa = "bowswa@andrims.com";
 const usnmRamenator = "ramenator@andrims.com";
 
-//pwd key encryption U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT
-//
+const login_data = JSON.parse("login_database.json");
+console.log(login_data);
 
 const pwdKey = CryptoJS.AES.decrypt("U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT", "andrims").toString(CryptoJS.enc.Utf8);
 const pwdAult = CryptoJS.AES.decrypt("U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=", pwdKey).toString(CryptoJS.enc.Utf8);
