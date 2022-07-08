@@ -1,3 +1,4 @@
+location.replace('/dashboard/dashboard.html')
 // credentials database
 const usnmAult = "ault@andrims.com";
 const usnmBowswa = "bowswa@andrims.com";
@@ -37,6 +38,13 @@ function login(){
         }
     } else if(username == usnmBowswa){
         if(password == pwdBowswa){
+            userBowswa();
+        } else{
+            document.getElementById('pL').style.color = 'red';
+      document.getElementById('pL').innerHTML = '<b>Incorrect Password</b>';
+        }
+    } else if(username == usnmRamenator){
+        if(password == pwdRamenator){
             userBowswa();
         } else{
             document.getElementById('pL').style.color = 'red';

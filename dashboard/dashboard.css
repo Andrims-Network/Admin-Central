@@ -89,10 +89,28 @@ button{
 }
 .dashItemTitle{
   font-size: 3vw;
+  position: relative;
+  top: 5vh;
 }
-.dashItemContent{}
-.dashItemButton{}
-img{
-  height: 5vh;
+.dashItemContent{
+  position: relative;
+  top: 5vh;
+  text-align: center;
+}
+.dashItemButton{
+  display: none;
+}
+.dashbImg{
+  height: 15vh;
   width: auto;
+  position: relative;
+  top: 5vh;
+}
+.header{
+    background: rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
