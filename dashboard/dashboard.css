@@ -121,9 +121,20 @@ button{
   .dashItemLinkVis{
        top: 7vh;
     position: relative;
-    color: #000;
     z-index: 11;
-    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 30%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s
 }
   .dashItemLinkVis:hover{
     color: #e3e3e3;
