@@ -119,7 +119,7 @@ button{
 
   }
   .dashItemLinkVis{
-       top: 7vh;
+       top: 5.5vh;
     position: relative;
     z-index: 11;
     background: rgba(255, 255, 255, 0.1);
