@@ -106,6 +106,28 @@ button{
   position: relative;
   top: 5vh;
 }
+.dashItemLink{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none; 
+        z-index: 10;
+        background-color: #FFF; 
+        opacity: 0; 
+
+  }
+  .dashItemLinkVis{
+       top: 7vh;
+    position: relative;
+    color: #000;
+    z-index: 11;
+    transition: 0.5s;
+}
+  .dashItemLinkVis:hover{
+    color: #e3e3e3;
+}
 .header{
     background: rgba(255, 255, 255, 0.05);
   box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
