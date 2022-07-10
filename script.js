@@ -125,7 +125,7 @@ function postLogin(){
     document.getElementById("continueButton").removeAttribute("hidden");
     document.getElementById("loginForm").setAttribute("hidden", "true");
     document.getElementById("adminOnly").setAttribute("hidden", "true");
-    document.getElementById("welcomeUsername").style.fontSize = 25;
+    document.getElementById("welcomeUsername").style.fontSize = "35px";
 }
 
 function continueButton(){

@@ -15,60 +15,90 @@
             <h1 id="titleHead">Andrims Admin Central Dashboard</h1>
         </div>
 
-        <div class="main">
-            <div class="dashbSection" id="adminOnly">
-                <!--AMP Widget-->
-                <div class="dashbItem" id="ampmain">
-                    <img class='dashbImg' src='/assets/amp.png'><br>
-                    <span class="dashItemTitle" id="ampTitle"><b>AMP</b></span><br>
-                    <span class="dashItemContent" id="ampContent">Server Management and Application Deployment Panel</span>
-                    <button class="dashItemButton" id="ampLink" onclick="window.open('http://amp.andrims.net', '_blank')">AMP Login</button>
+        <div class="main" id="main">
+            <div id="quicklinks">
+                <div class="dashbSection" id="adminOnly">
+                    <!--AMP Widget-->
+                    <div class="dashbItem" id="ampmain">
+                        <img class='dashbImg' src='/assets/images/amp.png'><br>
+                        <span class="dashItemTitle" id="ampTitle"><b>AMP</b></span><br>
+                        <span class="dashItemContent" id="ampContent">Server Management and Application Deployment Panel</span>
+                        <a class="dashItemLink" id="ampLink" href="http://amp.andrims.net" target="_blank">AMP Login</a>
+                    </div>
+                    <!--Cloudflare Widget-->
+                    <div class="dashbItem" id="cloudflare">
+                        <img class='dashbImg' src='/assets/images/cloudflare.png'><br>
+                        <span class="dashItemTitle" id="cloudflareTitle"><b>Cloudflare</b></span><br>
+                        <span class="dashItemContent" id="cloudflareContent">Domain Management and Frontend Deployments</span>
+                        <a class="dashItemLink" id="cloudflareLink" href='https://dash.cloudflare.com/ab0eee634ed415582b6225aeba7f8105' target='_blank'>Cloudflare</a>
+                    </div>
+                    <!--ImprovMX Widget-->
+                    <div class="dashbItem" id="improvMX">
+                        <img class='dashbImg' src='/assets/images/improvmx.png'><br>
+                        <span class="dashItemTitle" id="improvMXtitle"><b>ImprovMX</b></span><br>
+                        <span class="dashItemContent" id="improvMXcontent">Email Routing Management for andrims.com domain</span>
+                        <a class="dashItemLink" id="improvMXlink" href='https://app.improvmx.com/' target='_blank'>Manage</a>
+                    </div>
+                    <!--NoIP Widget-->
+                    <div class="dashbItem" id="noip">
+                        <img class='dashbImg' src='/assets/images/noip.png'><br>
+                        <span class="dashItemTitle" id="noipTitle"><b>noIP</b></span><br>
+                        <span class="dashItemContent" id="noipContent">Dynamic DNS IP Management for<br>Server Locations (DDNS)</span>
+                        <a class="dashItemLink" id="noipLink" href='https://my.noip.com/dynamic-dns' target='_blank'>DDNS</a>
+                    </div>
                 </div>
-                <!--Cloudflare Widget-->
-                <div class="dashbItem" id="cloudflare">
-                    <img class='dashbImg' src='/assets/cloudflare.png'><br>
-                    <span class="dashItemTitle" id="cloudflareTitle"><b>Cloudflare</b></span><br>
-                    <span class="dashItemContent" id="cloudflareContent">Domain Management and Frontend Deployments</span>
-                    <button class="dashItemButton" id="cloudflareLink" onclick="window.open('https://dash.cloudflare.com/ab0eee634ed415582b6225aeba7f8105', '_blank')">Cloudflare</button>
-                </div>
-                <!--ImprovMX Widget-->
-                <div class="dashbItem" id="improvMX">
-                    <img class='dashbImg' src='/assets/improvmx.png'><br>
-                    <span class="dashItemTitle" id="improvMXtitle"><b>ImprovMX</b></span><br>
-                    <span class="dashItemContent" id="improvMXcontent">Email Routing Management for andrims.com domain</span>
-                    <button class="dashItemButton" id="improvMXlink" onclick="window.open('https://app.improvmx.com/', '_blank')">Manage</button>
-                </div>
-                <!--NoIP Widget-->
-                <div class="dashbItem" id="noip">
-                    <img class='dashbImg' src='/assets/noip.png'><br>
-                    <span class="dashItemTitle" id="noipTitle"><b>noIP</b></span><br>
-                    <span class="dashItemContent" id="noipContent">Dynamic DNS IP Management for<br>Server Locations (DDNS)</span>
-                    <button class="dashItemButton" id="noipLink" onclick="window.open('https://my.noip.com/dynamic-dns', '_blank')">DDNS</button>
+                <div class="dashbSection" id="modAccess">
+                  
+                    <!--Github Widget-->
+                    <div class="dashbItem" id="github">
+                        <img class='dashbImg' src='/assets/images/github.png'><br>
+                        <span class="dashItemTitle" id="githubTitle"><b>Github</b></span><br>
+                        <span class="dashItemContent" id="githubContent">Andrims Github Organization to manage<br>Frontend Deployments</span>
+                        <a class="dashItemLink" id="githubLink" href='https://github.com/Andrims-Network' target='_blank'>Open Org</a>
+                    </div>
+                                <!--ReplIt Widget-->
+                    <div class="dashbItem" id="replit">
+                        <img class='dashbImg' src='/assets/images/replit-bg.png'><br>
+                        <span class="dashItemTitle" id="replitTitle"><b>Replit</b></span><br>
+                        <span class="dashItemContent" id="replitContent">Andrims Replit Org for collaboration in Git</span>
+                        <a class="dashItemLink" id="replitLink" href='https://replit.com/team/AndrimsDevs' target="_blank">Code</a>
+                    </div>
+                                    <!--RealVNC Widget-->
+                    <div class="dashbItem" id="realvnc">
+                        <img class="dashbImg" src="/assets/images/realvnc.png"><br>
+                        <span class="dashItemTitle" id="realvncTitle"><b>RealVNC</b></span><br>
+                        <span class="dashItemContent" id="realvncContent">Remote Desktop Server and Client Management</span><br><br>
+                        <a class="dashItemLinkVis" id="realvncDownload" href='https://www.realvnc.com/en/connect/download/vnc/' target='_blank'>Download</a><
+                        <a class="dashItemLink" id="realvncLink" href='https://manage.realvnc.com/en/teams/CaWOUpdbS29VKKBhJKm/computers' target='_blank'>Manage</a>
+                    </div>
                 </div>
             </div>
-            <div class="dashbSection" id="modAccess">
-              
-                <!--Github Widget-->
-                <div class="dashbItem" id="github">
-                    <img class='dashbImg' src='/assets/github.png'><br>
-                    <span class="dashItemTitle" id="githubTitle"><b>Github</b></span><br>
-                    <span class="dashItemContent" id="githubContent">Andrims Github Organization to manage<br>Frontend Deployments</span>
-                    <button class="dashItemButton" id="githubLink" onclick="window.open('https://github.com/Andrims-Network', '_blank')">Open Org</button>
+            <div id="filesNmore">
+                <div class="inSecondSection" id="staffDir">
+                    <p>Andrims Contacts</p>
+                    <div class="staffDir" id="staff-ault">
+                        <img src="/assets/staff-pfps/ault_pfp.png" alt="Ault's Profile Picture" class="staffPFP">
+                        <p>Ault</p>
+                        <label>Founder and Owner</label>
+                    </div>
+                    <div class="staffDir" id="staff-bowswa">
+                        <img src="" alt="Bowswa's Profile Picture" class="staffPFP">
+                        <p>Bowswa</p>
+                        <label>Founder and Owner</label>
+                    </div>
+                    <div class="staffDir" id="staff-ramenator">
+                        <img src="" alt="Ramenator's Profile Picture" class="staffPFP">
+                        <p>Ramenator</p>
+                        <label>Frontend Developer</label>
+                    </div>
                 </div>
-							<!--ReplIt Widget-->
-                <div class="dashbItem" id="replit">
-                    <img class='dashbImg' src='/assets/replit-bg.png'><br>
-                    <span class="dashItemTitle" id="replitTitle"><b>Replit</b></span><br>
-                    <span class="dashItemContent" id="replitContent">Andrims Replit Org for collaboration in Git</span>
-                    <button class="dashItemButton" id="replitLink" onclick="window.open('https://replit.com/team/AndrimsDevs', '_blank')">Code</button>
-                </div>
-                              <!--RealVNC Widget-->
-							  <div class="dashbItem" id="realvnc">
-                  <img class="dashbImg" src="/assets/realvnc.png"><br>
-                  <span class="dashItemTitle" id="realvncTitle"><b>RealVNC</b></span><br>
-                  <span class="dashItemContent" id="realvncContent">Remote Desktop Server and Client</span>
-                  <button class="dashItemButton" id="realvncDownload" onclick="window.open('https://www.realvnc.com/en/connect/download/vnc/', '_blank')">Download</button>
-                  <button class="dashItemButton" id="realvncLink" onclick="window.open('https://manage.realvnc.com/en/teams/CaWOUpdbS29VKKBhJKm/computers', '_blank')">Manage</button>
+                <div class="inSecondSection" id="files">
+                    <a href="/assets/files/Andrims Logins.xlsx" class="fileLink" id="officialLoginsFile" download="Andrims Official Account Logins">
+                        Official Logins
+                    </a>
+                    <a href="/assets/files/Staff Directory.xlsx" class="fileLink" id="staffDirFile" download="Andrims Staff Info">
+                        Staff Files
+                    </a>
                 </div>
             </div>
         </div>
