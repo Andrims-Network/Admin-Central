@@ -68,6 +68,7 @@ const pwdRamenator = CryptoJS.AES.decrypt(encPwdRamenator, pwdKey).toString(Cryp
 // --------------------------------------
 
 var timeout;
+
 function loader(){
     document.getElementById('login').style.display = 'none';
     document.getElementById('loader').style.display = 'block';
