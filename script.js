@@ -1,5 +1,5 @@
 // For ease of development while working on dashboard.html :
-// location.replace('/dashboard/dashboard.html');
+location.replace('/dashboard/dashboard.html');
 
 // --------------------------------------
 // -------- BEGIN AUTH PROCESS ----------
