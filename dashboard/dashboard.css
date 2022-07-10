@@ -21,7 +21,7 @@ body{
 
 @keyframes background {
   0%{background-position:11% 0%}
-  50%{background-position:90% 100%}
+  50%{background-position:90% 70%}
   100%{background-position:11% 0%}
 }
 
@@ -187,4 +187,8 @@ button{
 
 #filesNmore{
   height: 40vh;
+}
+
+.staffPFP{
+  border-radius: 50%;
 }
