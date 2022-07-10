@@ -176,3 +176,12 @@ button{
   background: #288CF4;
   color: #fff;
 }
+
+.filelink{
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid rgba(#000, 0.05);
+  position: relative;
+  padding: 20px 30px 20px 70px;
+}
+
