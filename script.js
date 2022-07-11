@@ -1,32 +1,18 @@
 // For ease of development while working on dashboard.html :
 // location.replace('/dashboard/dashboard.html');
 
-
-//Check for enters
-
-document.getElementById("usnm").addEventListener('keyup', (e) => {
-    if (e.key === 'Enter' || e.keyCode === 13) {
-      loader();   
-    }
-});
-document.getElementById("pwd").addEventListener('keyup', (e) => {
-    if (e.key === 'Enter' || e.keyCode === 13) {
-      loader();
-    }
-});
-
 // --------------------------------------
 // -------- BEGIN AUTH PROCESS ----------
 // --------------------------------------
 
-// get request to database repo
+//http get request to database repo via "my json server"
 function httpGet(theUrl) {
     let xmlHttpReq = new XMLHttpRequest();
     xmlHttpReq.open("GET", theUrl, false); 
     xmlHttpReq.send(null);
     return xmlHttpReq.responseText;
   }
-  
+
 //import info from database
 const credentialsData = httpGet('https://my-json-server.typicode.com/AndrimsDevs/Admin-Central/db');
 
@@ -58,6 +44,18 @@ const pwdRamenator = CryptoJS.AES.decrypt(encPwdRamenator, pwdKey).toString(Cryp
 // --------------------------------------
 // ---------- END AUTH PROCESS ----------
 // --------------------------------------
+
+//Check for enter key pushes
+document.getElementById("usnm").addEventListener('keyup', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      loader();   
+    }
+});
+document.getElementById("pwd").addEventListener('keyup', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      loader();
+    }
+});
 
 var timeout;
 
@@ -130,10 +128,18 @@ function userRamenator(){
 }
 
 function postLogin(){
+    //change attribute visibility
     document.getElementById("continueButton").removeAttribute("hidden");
     document.getElementById("loginForm").setAttribute("hidden", "true");
     document.getElementById("adminOnly").setAttribute("hidden", "true");
     document.getElementById("welcomeUsername").style.fontSize = "35px";
+
+    //check for enter key to trigger continue button
+    document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          continueButton();
+        }
+    });
 }
 
 function continueButton(){
