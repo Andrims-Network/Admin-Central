@@ -1,11 +1,26 @@
 // For ease of development while working on dashboard.html :
 // location.replace('/dashboard/dashboard.html');
 
+
+//Check for enters
+
+document.getElementById("usnm").addEventListener('keyup', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      loader();   
+    }
+});
+document.getElementById("pwd").addEventListener('keyup', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      loader();
+    }
+});
+
 // --------------------------------------
 // -------- BEGIN AUTH PROCESS ----------
 // --------------------------------------
 
 // internal json, will be in use temporarily until server side json access is setup
+
 const credentialsData = `{
     "usernames": {
         "ault": "ault@andrims.com",
@@ -53,6 +68,7 @@ const pwdRamenator = CryptoJS.AES.decrypt(encPwdRamenator, pwdKey).toString(Cryp
 // --------------------------------------
 
 var timeout;
+
 function loader(){
     document.getElementById('login').style.display = 'none';
     document.getElementById('loader').style.display = 'block';

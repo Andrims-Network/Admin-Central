@@ -12,16 +12,16 @@ body{
   margin: 0;
   background: #b62b83;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   background-image: linear-gradient(135deg,#f0672c, #ba26b0);
-  background-size: 400% 400%;
+  background-size: 800% 800%;
   animation: background 60s ease infinite;
   font-family: 'Lack', sans-serif;
 }
 
 @keyframes background {
   0%{background-position:11% 0%}
-  50%{background-position:90% 100%}
+  50%{background-position:90% 70%}
   100%{background-position:11% 0%}
 }
 
@@ -185,3 +185,12 @@ button{
   padding: 20px 30px 20px 70px;
 }
 
+#filesNmore{
+  height: 40vh;
+}
+
+.staffPFP{
+  border-radius: 50%;
+  height: auto;
+  width: 5%;
+}
