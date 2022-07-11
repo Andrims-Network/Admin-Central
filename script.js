@@ -19,24 +19,16 @@ document.getElementById("pwd").addEventListener('keyup', (e) => {
 // -------- BEGIN AUTH PROCESS ----------
 // --------------------------------------
 
-// internal json, will be in use temporarily until server side json access is setup
-
-const credentialsData = `{
-    "usernames": {
-        "ault": "ault@andrims.com",
-        "bowswa": "bowswa@andrims.com",
-        "ramenator": "ramenator@andrims.com"
-    },
-    "passwords": {
-        "ault": "U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=",
-        "bowswa": "U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=",
-        "ramenator": "U2FsdGVkX1+ZmzrKkCm5GgdWH6pIU2emTlQvUOhf7kY="
-    },
-    "encryption": {
-        "cryptedKey": "U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT",
-        "keyCodeDecrypt": "andrims"
-    }
-}`;
+// get request to database repo
+function httpGet(theUrl) {
+    let xmlHttpReq = new XMLHttpRequest();
+    xmlHttpReq.open("GET", theUrl, false); 
+    xmlHttpReq.send(null);
+    return xmlHttpReq.responseText;
+  }
+  
+//import info from database
+const credentialsData = httpGet('https://my-json-server.typicode.com/AndrimsDevs/Admin-Central/db');
 
 // convert json data to js readable objects
 const credsObj = JSON.parse(credentialsData);
