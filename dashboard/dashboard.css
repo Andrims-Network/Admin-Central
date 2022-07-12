@@ -189,8 +189,71 @@ button{
   height: 40vh;
 }
 
-.staffPFP{
-  border-radius: 50%;
+.column {
+  width: 20%;
+  text-align: center;
+  position: absolute;
+}
+.column img{
   height: auto;
-  width: 5%;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.column:nth-child(1){
+  left: 10%;
+}
+.column:nth-child(2){
+  left: 40%;
+}
+.column:nth-child(3){
+  left: 70%;
+}
+.card {
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.container {
+  padding: 0 16px;
+  margin-bottom: 30px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+.desc{
+  color: gray;
+}
+
+.container h2{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  margin-left: 1%;
+  padding: 2%;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 95%;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  background-color: #555;
 }
