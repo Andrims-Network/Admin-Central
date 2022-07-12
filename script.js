@@ -1,42 +1,20 @@
 // For ease of development while working on dashboard.html :
 // location.replace('/dashboard/dashboard.html');
 
-
-//Check for enters
-
-document.getElementById("usnm").addEventListener('keyup', (e) => {
-    if (e.key === 'Enter' || e.keyCode === 13) {
-      loader();   
-    }
-});
-document.getElementById("pwd").addEventListener('keyup', (e) => {
-    if (e.key === 'Enter' || e.keyCode === 13) {
-      loader();
-    }
-});
-
 // --------------------------------------
 // -------- BEGIN AUTH PROCESS ----------
 // --------------------------------------
 
-// internal json, will be in use temporarily until server side json access is setup
+//http get request to database repo via "my json server"
+function httpGet(theUrl) {
+    let xmlHttpReq = new XMLHttpRequest();
+    xmlHttpReq.open("GET", theUrl, false); 
+    xmlHttpReq.send(null);
+    return xmlHttpReq.responseText;
+  }
 
-const credentialsData = `{
-    "usernames": {
-        "ault": "ault@andrims.com",
-        "bowswa": "bowswa@andrims.com",
-        "ramenator": "ramenator@andrims.com"
-    },
-    "passwords": {
-        "ault": "U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=",
-        "bowswa": "U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=",
-        "ramenator": "U2FsdGVkX1+ZmzrKkCm5GgdWH6pIU2emTlQvUOhf7kY="
-    },
-    "encryption": {
-        "cryptedKey": "U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT",
-        "keyCodeDecrypt": "andrims"
-    }
-}`;
+//import info from database
+const credentialsData = httpGet('https://my-json-server.typicode.com/AndrimsDevs/Admin-Central/db');
 
 // convert json data to js readable objects
 const credsObj = JSON.parse(credentialsData);
@@ -66,6 +44,18 @@ const pwdRamenator = CryptoJS.AES.decrypt(encPwdRamenator, pwdKey).toString(Cryp
 // --------------------------------------
 // ---------- END AUTH PROCESS ----------
 // --------------------------------------
+
+//Check for enter key pushes
+document.getElementById("usnm").addEventListener('keyup', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      loader();   
+    }
+});
+document.getElementById("pwd").addEventListener('keyup', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      loader();
+    }
+});
 
 var timeout;
 
@@ -138,10 +128,18 @@ function userRamenator(){
 }
 
 function postLogin(){
+    //change attribute visibility
     document.getElementById("continueButton").removeAttribute("hidden");
     document.getElementById("loginForm").setAttribute("hidden", "true");
     document.getElementById("adminOnly").setAttribute("hidden", "true");
     document.getElementById("welcomeUsername").style.fontSize = "35px";
+
+    //check for enter key to trigger continue button
+    document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          continueButton();
+        }
+    });
 }
 
 function continueButton(){
