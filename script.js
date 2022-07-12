@@ -135,13 +135,12 @@ function postLogin(){
     document.getElementById("welcomeUsername").style.fontSize = "35px";
 
     //check for enter key to trigger continue button
-    document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-          continueButton();
-        }
-    });
-}
-
+window.addEventListener('keyup', function(event) {
+      if (event.keyCode === 13) { 
+        continueButton();
+      }
+      })
+                        }
 function continueButton(){
     if(userAuth == "locked"){
         window.alert("Authentication failed!");
