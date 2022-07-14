@@ -72,25 +72,48 @@
                     </div>
                 </div>
             </div>
+
             <div class="filesNmore" id="filesNmore">
+              <button id='btn-1' class='glass-button' onclick='staffDirDisplay()'>Staff</button>
+<button id='btn-2' class='glass-button' onclick='filesDisplay()'>Files</button>
+              <p>Andrims Contacts</p><br>
                 <div class="inSecondSection" id="staffDir">
-                    <p>Andrims Contacts</p>
-                    <div class="staffDir" id="staff-ault">
-                        <img src="/assets/staff-pfps/ault_pfp.png" alt="Ault's Profile Picture" class="staffPFP">
-                        <p>Ault</p>
-                        <label>Founder and Owner</label>
+                <div class="row">
+                  <div class="column">
+                    <div class="card">
+                      <img src="/assets/staff-pfps/ault_pfp.png" alt="Ault">
+                      <div class="container">
+                        <h2>Ault</h2>
+                        <p class="title"><b>Founder & Owner</b></p>
+                        <p class='desc'>Descriptive Blurb.</p>
+                        <p><a style='text-decoration: none;' href="mailto: ault@andrims.com" target='_blank' class="button">ault@andrims.com</a></p>
+                      </div>
                     </div>
-                    <div class="staffDir" id="staff-bowswa">
-                        <img src="/assets/staff-pfps/bowswa_pfp.png" alt="Bowswa's Profile Picture" class="staffPFP">
-                        <p>Bowswa</p>
-                        <label>Founder and Owner</label>
-                    </div>
-                    <div class="staffDir" id="staff-ramenator">
-                        <img src="/assets/staff-pfps/ramenator_pfp.png" alt="Ramenator's Profile Picture" class="staffPFP">
-                        <p>Ramenator</p>
-                        <label>Frontend Developer</label>
-                    </div>
+                  </div>
+  <div class="column">
+    <div class="card">
+      <img src="/assets/staff-pfps/bowswa_pfp.png" alt="Ault">
+      <div class="container">
+        <h2>Bowswa</h2>
+        <p class="title"><b>Founder & Owner</b></p>
+        <p class='desc'>Descriptive Blurb.</p>
+        <p><a style='text-decoration: none;' href="mailto: bowswa@andrims.com" target='_blank' class="button">bowswa@andrims.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="/assets/staff-pfps/ramenator_pfp.png" alt="Ault">
+      <div class="container">
+        <h2>Ramenator</h2>
+        <p class="title"><b>Frontend Developer</b></p>
+        <p class='desc'>Descriptive Blurb.</p>
+        <p><a style='text-decoration: none;' href="mailto:ramenator@andrims.com" target='_blank' class="button">ramenator@andrims.com</a></p>
+      </div>
+    </div>
+  </div>
                 </div>
+                  </div>
                 <div class="inSecondSection" id="files">
                     <a href="/assets/files/Andrims Logins.xlsx" class="fileLink" id="officialLoginsFile" download="Andrims Official Account Logins">
                         Official Logins
@@ -101,7 +124,6 @@
                 </div>
             </div>
         </div>
-    </div>
   <script src='/assets/squarebg.js'></script>
   <script src="dashboard.js"></script>
 </body>
