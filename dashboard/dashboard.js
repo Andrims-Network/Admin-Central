@@ -11,4 +11,4 @@ function filesDisplay(){
   document.getElementById('btn-1').removeAttribute("disabled");
   document.getElementById('btn-2').disabled = 'true';
 }
-staffDirDisplay();
+filesDisplay();
