@@ -7,6 +7,7 @@
     <title>Admin Central</title>
     <link rel="icon" type="image/x-icon" href=".../assets/icon.png">
     <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="all">
@@ -72,12 +73,14 @@
                     </div>
                 </div>
             </div>
-
+<br>
             <div class="filesNmore" id="filesNmore">
+              <center>
               <button id='btn-1' class='glass-button' onclick='staffDirDisplay()'>Staff</button>
 <button id='btn-2' class='glass-button' onclick='filesDisplay()'>Files</button>
-              <p>Andrims Contacts</p><br>
+              </center>
                 <div class="inSecondSection" id="staffDir">
+                  <h1 style='text-align: center; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 1px; color: rgba(255,255,255,0.7); font-size: 300%;'>Andrims Contacts</h1><br>
                 <div class="row">
                   <div class="column">
                     <div class="card">
@@ -115,12 +118,21 @@
                 </div>
                   </div>
                 <div class="inSecondSection" id="files">
-                    <a href="/assets/files/Andrims Logins.xlsx" class="fileLink" id="officialLoginsFile" download="Andrims Official Account Logins">
+                                    <h1 style='text-align: center; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 1px; color: rgba(255,255,255,0.7); font-size: 300%;'>File Manager</h1><br>
+                  <div class='file-container'>
+                  <div class='file'>
+                    <span class='download material-symbols-outlined'>Download</span>
+                    <a class='link' href="/assets/files/Andrims Logins.xlsx" class="fileLink" id="officialLoginsFile" download="Andrims Official Account Logins">
                         Official Logins
                     </a>
-                    <a href="/assets/files/Staff Directory.xlsx" class="fileLink" id="staffDirFile" download="Andrims Staff Info">
+                  </div>
+                    <div class='file'>
+                      <span class='download material-symbols-outlined'>Download</span>
+                    <a class='link' href="/assets/files/Staff Directory.xlsx" class="fileLink" id="staffDirFile" download="Andrims Staff Info">
                         Staff Files
                     </a>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
