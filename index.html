@@ -13,23 +13,27 @@
   <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/js/okta-sign-in.min.js" type="text/javascript"></script>
 </head>
 <body>
-      <div id="loader" style='display: none'><div class="ripple"><div></div><div></div></div></div>
+      <div id="loader" style='display: none;'><div class="ripple"><div></div><div></div></div></div>
 
   <div class='loginForm'>
     <div id='login' style='text-align: center;'>
       <h1>Andrims</h1>
-      <h3><span id='welcomeUsername'>Welcome Back!</span></h3><br>
-      <p id='adminOnly'>This page is for admins only! If you're lost, click <a href='https://www.andrims.com'>here</a></p><br>
+      
       <form id="loginForm">
+        <h3><span>Welcome Back!</span></h3><br>
         <label id='uL' class="label, inForm" for="usnm">Username</label><br>
         <input class="inForm" id="usnm" type="email" placeholder="username@andrims.com">
-        <br><br>
+        <br>
         <label id='pL' class="label, inForm" for="pwd">Password</label><br>
         <input class="inForm" id="pwd" type="password" placeholder='password'>
         <br><br>
-        <button class="inForm" id='loginBtn' type="button" onclick="loader()">Login</button>
+        <button class="inForm" id='loginBtn' type="button" onclick="loader()">Login</button><br><br>
+                    <p id='adminOnly'>This page is for admins only! If you're lost, click <a href='https://www.andrims.com'>here</a></p><br><br>
+
       </form>
-      <button id="continueButton" onclick="continueButton()" type="button" hidden>Continue</button>
+      <h3><span id='welcomeUsername'></span></h3>
+      <button id="continueButton" onclick="continueButton()" type="button" hidden>Continue</button><br><br>
+
     </div>
   </div>
 
