@@ -19,16 +19,8 @@ body{
   background: #b62b83;
   height: 100vh;
   overflow: auto;
-  background-image: linear-gradient(135deg,#f0672c, #ba26b0);
-  background-size: 800% 800%;
-  animation: background 60s ease infinite;
+  background-image: linear-gradient(45deg, #FC466B, #3F5EFB);
   font-family: 'Lack', sans-serif;
-}
-
-@keyframes background {
-  0%{background-position:11% 0%}
-  50%{background-position:90% 70%}
-  100%{background-position:11% 0%}
 }
 
 button{
@@ -70,7 +62,6 @@ button{
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 #adminOnly .dashbItem{
-  background: rgba(255,255,255,0.1);
   transition: 0.5s;
   margin: 2vh;
   width: 25%;
@@ -80,10 +71,16 @@ button{
   cursor: pointer;
   border-radius: 0.5rem;
   z-index: 1;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.09);
 }
 #modAccess .dashbItem{
   transition: 0.5s;
-  background: rgba(255,255,255,0.1);
   margin: 2vh;
   width: 33.33%;
   height: 40vh;
@@ -92,11 +89,20 @@ button{
   cursor: pointer;
   border-radius: 0.5rem;
   z-index: 1;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.09);
 }
 .dashItemTitle{
   font-size: 3vw;
   position: relative;
   top: 5vh;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0.7;
 }
 .dashItemContent{
   position: relative;
@@ -128,20 +134,15 @@ button{
        top: 5.5vh;
     position: relative;
     z-index: 11;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgb(0 0 0 / 30%);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #000;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  border: 3px solid rgba(255, 255, 255, 0.09);
+    padding: 1em;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
     text-decoration: none;
-    transition: 0.5s
-}
+  }
   .dashItemLinkVis:hover{
     color: #e3e3e3;
 }
@@ -177,6 +178,7 @@ button{
 }
 #replit:hover{
   background: #E6E6E6;
+  color: #000 !important;
 }
 #realvnc:hover{
   background: #288CF4;
