@@ -63,9 +63,9 @@ function loader(){
     document.getElementById('login').style.display = 'none';
     document.getElementById('loader').style.display = 'block';
     timeout = setTimeout(login, 1000);
-    document.getElementById('uL').style.color = 'black';
+    document.getElementById('uL').style.color = 'white';
     document.getElementById('uL').innerHTML = 'Username';
-    document.getElementById('pL').style.color = 'black';
+    document.getElementById('pL').style.color = 'white';
     document.getElementById('pL').innerHTML = 'Password';
 }
 
@@ -132,7 +132,7 @@ function postLogin(){
     document.getElementById("continueButton").removeAttribute("hidden");
     document.getElementById("loginForm").setAttribute("hidden", "true");
     document.getElementById("adminOnly").setAttribute("hidden", "true");
-    document.getElementById("welcomeUsername").style.fontSize = "35px";
+    document.getElementById("welcomeUsername").style.fontSize = "55px";
 
     //check for enter key to trigger continue button
 window.addEventListener('keyup', function(event) {
