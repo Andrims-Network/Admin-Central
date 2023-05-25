@@ -5,12 +5,12 @@
         "ramenator": "ramenator@andrims.com"
     },
     "passwords": {
-        "ault": "U2FsdGVkX1+Z+RZojd+sQY1VWWHERVMdf48Kra9Iyd0=",
-        "bowswa": "U2FsdGVkX1/ayi8UI3oaT3TJs/jXjUrKrQvoJmOuKXw7Aksd3djcb5BENTJUOAYkaGxjZzLzs3muDdtT7RIvHoJfJ6waReYv2W8QikwYagZheanrJdNXajTPkSntg2i7tDIfXcnWwhX3Re79R+fR696tR7fOL7FmtvDP5OnI79o=",
-        "ramenator": "U2FsdGVkX1+ZmzrKkCm5GgdWH6pIU2emTlQvUOhf7kY="
+        "ault": "redacted",
+        "bowswa": "redacted",
+        "ramenator": "redacted"
     },
     "encryption": {
-        "cryptedKey": "U2FsdGVkX1/KCrMxHMpAAYHwmXku/EiQAWQgkXkpGaxoem0A5JDA6dxwpbRcylaT",
-        "keyCodeDecrypt": "andrims"
+        "cryptedKey": "redacted",
+        "keyCodeDecrypt": "redacted"
     }
 }
